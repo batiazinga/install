@@ -1,0 +1,34 @@
+# this file must be sourced in .bashrc
+
+echo ">> reading $HOME/.bashrc_extension file..."
+
+# alias
+alias lh='ll -h'
+
+# put dev-tools/bin in the path
+export PATH=$PATH:~/Projects/dev-tools/bin
+
+# Function to set a nice go environment.
+# First gopath is the go-libs directory.
+# Current directory becomes second gopath
+# if it is not the go-libs directory.
+# Its bin is added to the path.
+function setgoenv() {
+    GOLIBS=~/Projects/go-libs
+    # first gopath is go-libs
+    export GOPATH=$GOLIBS
+    # second gopath is the current directory
+    # if $pwd is not go-libs
+    if [ $GOLIBS != $(pwd) ]; then
+        export GOPATH=$GOPATH:$(pwd)
+    fi
+    # add current directory's bin to the path
+    export PATH=$PATH:$(pwd)/bin
+}
+
+# Function to reset gopath to dev-tools
+# before a 'go get' some tool.
+# Its bin is already in the path.
+function godevtools() {
+    export GOPATH=~/Projects/dev-tools
+}

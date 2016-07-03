@@ -1,0 +1,33 @@
+" This is my .vimrc file
+
+" Minimalist example from https://github.com/tpope/vim-pathogen
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+" Settings for tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" Settings for vim-go
+let g:go_fmt_command = "goimports"
+
+" Molokai colorscheme
+colorscheme molokai
+" Show line number on the left and set colors
+" This must be done after setting the colorscheme
+set number
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
+" Settings for neocomplete (extracted from the README)
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" Generate doc
+Helptags

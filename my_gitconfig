@@ -1,0 +1,39 @@
+[user]
+	name = Batiazinga
+	email = luc.nguyenthe@gmail.com
+
+[color]
+	ui = true
+
+[color "status"]
+	added = green
+	changed = red
+	untracked = blue
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[alias]
+	s = status
+	ss = status -s
+	br = branch -av
+	c = commit
+	l = log --oneline --color --graph --decorate=short
+	f = fetch --all --tags --prune
+
+[diff]
+	tool = meld
+
+[merge]
+	tool = meld
+
+[push]
+	default = simple
