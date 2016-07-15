@@ -8,6 +8,7 @@ sudo apt-get install -y \
     git-all \
     meld \
     build-essential \
+    python-numpy python-scipy python-matplotlib \
     curl
 
 echo ""
