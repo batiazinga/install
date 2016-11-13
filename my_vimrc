@@ -9,6 +9,10 @@ filetype plugin indent on
 nmap <F8> :TagbarToggle<CR>
 
 " Settings for vim-go
+" Sometimes this feature is annoying
+" e.g. import "google.golang.org/api/drive/v3"
+" which is in fact called 'drive'.
+" => goimports automatically removes this import!
 let g:go_fmt_command = "goimports"
 
 " Molokai colorscheme
