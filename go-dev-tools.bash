@@ -6,6 +6,10 @@ go get -u golang.org/x/tools/cmd/goimports
 echo ">> install dlv"
 go get -u github.com/go-delve/delve/cmd/dlv
 
-# golint is a linter for Go code
-echo ">> install golint"
-go get -u golang.org/x/lint/golint
+# golangci-lint is linter aggregator
+echo ">> install golangci-lint"
+go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
+
+# guru is an editor-integrated tool for navigating into Go code
+echo ">> install guru"
+go get -u golang.org/x/tools/cmd/guru
