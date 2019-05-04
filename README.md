@@ -61,3 +61,17 @@ Also install `guru` (see `go-dev-tools.bash`).
 
 Install [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter) and [SublimeLinter-golangcilint](https://packagecontrol.io/packages/SublimeLinter-golangcilint) packages.
 Also install [golangci-lint](https://github.com/golangci/golangci-lint).
+
+## Autocompletion
+
+Install `gocode` (see `go-dev-tools.bash`) and follow [instructions](https://github.com/mdempsky/gocode) to integrate it into `Sublime Text`.
+
+In file `Preferences.sublime-settings - User` (open from `Preferences > Settings`) add
+```json
+{
+    "auto_complete_triggers": [
+        {"selector": "text.html", "characters": "<"},
+        {"selector": "source.go", "characters": "."}
+    ],
+}
+```

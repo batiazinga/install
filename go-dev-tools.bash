@@ -13,3 +13,8 @@ go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
 # guru is an editor-integrated tool for navigating into Go code
 echo ">> install guru"
 go get -u golang.org/x/tools/cmd/guru
+
+# gocode is an autocompletion tool to be integrated into an editor
+# it is not compatible with go module
+echo ">> install gocode"
+go get -u github.com/mdempsky/gocode
